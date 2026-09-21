@@ -1,0 +1,368 @@
+/* ==========================================================================
+   UNIFY CMS V6 - MASTER MAIN STYLESHEET (style.css)
+   1280px Artboard Baseline with Fluid `vw` Scaling on Desktop (>= 1024px)
+   Standard `px` for Tablet (768px-1023.98px) and Mobile (<= 767.98px)
+   ========================================================================== */
+
+/* ==========================================================================
+   DESIGN TOKENS (:root VARS)
+   ========================================================================== */
+:root {
+  --font-main: "Inter", sans-serif;
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #e3e2e2;
+  --bg-dark: #000000;
+  --text-primary: #111111;
+  --text-secondary: #444748;
+  --text-default: #1B1C1C;
+  --text-light: #ffffff;
+  --text-light-gray: #a1a1aa;
+  --text-dark-gray: #333333;
+  --border-color: #e5e5e5;
+  --border-input: #d4d4d8;
+  --color-error: #ef4444;
+  --color-error-ultra-light: #FFE6E6;
+  --color-error-light: #f87171;
+  --color-error-dark: #dc2626;
+  --color-star: #facc15;
+  --bg-default: #FBF9F9;
+  --bg-grey: rgba(251, 249, 249, 1);
+  --bg-quaternary: #F5F3F3;
+  --border-default: #C4C7C7;
+  --border-grey: rgba(196, 199, 199, 1);
+  --bg-placeholder: #E9E8E7;
+  --overlay-backdrop: rgba(0, 0, 0, 0.4);
+  --color-error-highlight: #FF0000;
+  --color-success-light: #ECFFF3;
+  --text-heading: var(--text-primary);
+  --color-link: #2563EB;
+  --bg-callout: var(--bg-quaternary);
+  --h1-fw: 800;
+  --h1-fs: 3.7500vw;
+  --h1-lh: 4.1406vw;
+  --h1-ls: -0.0674vw;
+  --h2-fw: 700;
+  --h2-fs: 2.5000vw;
+  --h2-lh: 2.9688vw;
+  --h2-ls: 0vw;
+  --h3-fw: 700;
+  --h3-fs: 1.8750vw;
+  --h3-lh: 2.5000vw;
+  --h3-ls: 0vw;
+  --h4-fs: 1.8750vw;
+  --h4-lh: 2.5000vw;
+  --p-fw: 400;
+  --p-fs: 1.2500vw;
+  --p-lh: 1.9531vw;
+  --p-ls: 0vw;
+  --spacing-80: 6.2500vw;
+  --h2-form: 1.8750vw;
+  --border-light: #E5E5E1;
+  /* Accent & Status */
+  --color-success: #16a34a;
+  --color-accent-paypal: #ffc439;
+  --color-accent-applepay: #000000;
+
+  /* Specific Hover / Active Button States */
+  --btn-primary-hover-bg: #00000099;
+  --btn-yellow-hover-bg: rgba(255, 196, 57, 0.6);
+}
+
+/* ==========================================================================
+   HTML RESETS & GLOBAL ELEMENTS (h1-h6, p, Layout Utilities)
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-default);
+}
+
+.landing-page {
+  font-family: var(--font-main);
+  color: var(--text-primary);
+  background-color: var(--bg-default);
+  overflow-x: hidden;
+}
+
+.landing-page h1, h1 {
+  font-family: var(--font-main);
+  font-weight: var(--h1-fw);
+  font-size: var(--h1-fs);
+  line-height: var(--h1-lh);
+  /* letter-spacing: var(--h1-ls); */
+}
+.landing-page h2, h2 {
+  font-family: var(--font-main);
+  font-weight: var(--h2-fw);
+  font-size: var(--h2-fs);
+  line-height: var(--h2-lh);
+  letter-spacing: var(--h2-ls);
+  color: var(--text-default);
+}
+.landing-page h3, h3 {
+  font-family: var(--font-main);
+  font-weight: var(--h3-fw);
+  font-size: var(--h3-fs);
+  line-height: var(--h3-lh);
+  letter-spacing: var(--h3-ls);
+}
+
+h4 {
+  font-family: var(--font-main);
+  font-weight: var(--h3-fw);
+  font-size: var(--h4-fs);
+  line-height: var(--h4-lh);
+}
+
+.landing-page p, p {
+  font-family: var(--font-main);
+  font-weight: var(--p-fw);
+  font-size: var(--p-fs);
+  line-height: var(--p-lh);
+  letter-spacing: var(--p-ls);
+}
+
+.landing-container {
+  width: 100% !important;
+  max-width: 89.0625vw !important;
+  margin: 0 auto;
+  --bs-gutter-x: 1.6842vw;
+}
+.landing-text-center {
+  text-align: center;
+}
+.landing-mt-40 {
+  margin-top: 2.807vw;
+}
+.landing-mb-40 {
+  margin-bottom: 2.807vw;
+}
+.landing-mt-48 {
+  margin-top: 3.3684vw;
+}
+.landing-section {
+  padding: var(--spacing-80) 0;
+}
+
+/* ==========================================================================
+   BUTTON COMPONENTS (Class-Based Reusable Button Component Library)
+   ========================================================================== */
+
+.landing-btn {
+  font-family: var(--font-main);
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Primary Button (.unify-btn-primary) */
+.unify-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  color: var(--bg-primary);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 1.8750vw;
+  line-height: 2.5000vw;
+  letter-spacing: 0.1563vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5625vw 1.5625vw;
+  border-radius: 0.6250vw;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0.7813vw 1.1719vw #0000001A;
+  box-sizing: border-box;
+}
+.unify-btn-primary-md {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2500vw 3.7500vw;
+  font-size: 1.0938vw;
+  line-height: 1.1719vw;
+  letter-spacing: 0.0781vw;
+  font-weight: 700;
+  border-radius: 0.3125vw;
+  text-transform: uppercase;
+  height: 3.6719vw;
+  background-color: var(--bg-dark);
+  color: var(--bg-primary);
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Primary Button: Hover & Active States (#00000099) */
+.unify-btn-primary:hover,
+.unify-btn-primary:active,
+.unify-btn-primary:focus-visible,
+.unify-btn-primary.is-active,
+.unify-btn-primary-md:hover,
+.unify-btn-primary-md:active,
+.unify-btn-primary-md:focus-visible {
+  background-color: var(--btn-primary-hover-bg, #00000099) !important;
+}
+
+/* Yellow / PayPal Button (.unify-btn-yellow, .landing-btn-paypal) */
+.unify-btn-yellow,
+.landing-btn-paypal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent-paypal, #FFC439);
+  color: var(--text-primary, #111111);
+  font-family: var(--font-main);
+  font-weight: var(--h3-fw, 700);
+  font-size: var(--h3-fs, 1.8750vw);
+  line-height: var(--h3-lh, 2.5000vw);
+  letter-spacing: 0.1563vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.1228vw 2.2456vw;
+  border-radius: 0.6250vw;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0.7813vw 1.1719vw rgba(255, 196, 57, 0.2);
+  box-sizing: border-box;
+}
+
+/* Yellow Button: Hover & Active States (#FFC439 with 60% opacity) */
+.unify-btn-yellow:hover,
+.unify-btn-yellow:active,
+.unify-btn-yellow:focus-visible,
+.unify-btn-yellow.is-active,
+.landing-btn-paypal:hover,
+.landing-btn-paypal:active,
+.landing-btn-paypal:focus-visible,
+.landing-btn-paypal.is-active {
+  background-color: var(--btn-yellow-hover-bg, rgba(255, 196, 57, 0.6)) !important;
+  color: var(--text-primary, #111111) !important;
+}
+
+/* PayPal Logo Icon Helper */
+.landing-btn-paypal svg,
+.landing-btn-paypal img {
+  height: 1.8750vw;
+  width: auto;
+  display: block;
+}
+
+/* Outline / Action Button (.unify-btn-outline, .landing-btn-action) */
+.unify-btn-outline,
+.landing-btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-weight: var(--h3-fw, 700);
+  font-size: 1.0938vw;
+  line-height: 1.4063vw;
+  letter-spacing: 0.0781vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7813vw 1.8750vw;
+  border-radius: 0.3906vw;
+  border: 1px solid var(--border-input);
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* Outline Button: Hover & Active States */
+.unify-btn-outline:hover,
+.unify-btn-outline:active,
+.unify-btn-outline:focus-visible,
+.unify-btn-outline.is-active,
+.landing-btn-action:hover,
+.landing-btn-action:active,
+.landing-btn-action:focus-visible,
+.landing-btn-action.is-active {
+  background-color: var(--bg-quaternary);
+  border-color: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+/* Explicit Action REMOVE variant */
+.landing-btn-action.is-remove,
+.landing-btn-action--remove {
+  background-color: var(--bg-primary);
+  border-color: var(--border-input);
+  color: var(--text-primary);
+}
+
+.landing-btn-action.is-remove:hover,
+.landing-btn-action.is-remove:active,
+.landing-btn-action--remove:hover,
+.landing-btn-action--remove:active {
+  background-color: var(--bg-quaternary);
+  border-color: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+/* Header Buy Button (.landing-btn-buy) */
+.landing-btn-buy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  text-decoration: none;
+  width: 10.8594vw;
+  height: 3.0469vw;
+  border-radius: 0.2807vw;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 1.0938vw;
+  line-height: 1.1719vw;
+  letter-spacing: 0.0781vw;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background .3s;
+}
+
+.landing-btn-buy:hover,
+.landing-btn-buy:active {
+  background: #00000099;
+  color: var(--text-light);
+}
+
+/* Button Utility Modifiers */
+.landing-btn-full {
+  width: 100% !important;
+}
+
+.landing-btn-sm {
+  font-size: 1.0156vw;
+  line-height: 1.4063vw;
+  padding: 0.6250vw 1.2500vw;
+  border-radius: 0.3125vw;
+}
+
+.landing-btn-lg {
+  font-size: 2.0313vw;
+  line-height: 2.6563vw;
+  padding: 1.2500vw 2.5000vw;
+  border-radius: 0.7813vw;
+}

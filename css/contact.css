@@ -1,0 +1,901 @@
+/* ==========================================================================
+   UNIFY CMS V6 - CONTACT US PAGE STYLESHEET (ALL-IN-ONE STANDALONE)
+   Written Clean & Section-and-Content Serial-Wise
+   1280px Artboard Baseline with Fluid `vw` Scaling on Desktop (>= 1024px)
+   Standard `px` for Tablet (768px-1023.98px) and Mobile (<= 767.98px)
+   ========================================================================== */
+
+.contact-main-area {
+  background-color: var(--bg-default);
+  width: 100%;
+}
+
+.contact-hero-area {
+  width: 100%;
+}
+
+.contact-main-title {
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.contact-main-subtitle {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.unify-btn-primary-md {
+  height: auto;
+}
+
+
+/* ==========================================================================
+   07. SECTION 4: CONTACT FORM CARD
+   ========================================================================== */
+.contact-layout-grid {
+  display: flex;
+  width: 100%;
+}
+
+.contact-form-column {
+  box-sizing: border-box;
+}
+
+.contact-form-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-row-names {
+  display: flex;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-label {
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.contact-input,
+.contact-select,
+.contact-textarea {
+  width: 100%;
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-input);
+  color: var(--text-primary);
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: var(--text-light-gray);
+}
+
+.contact-input:focus,
+.contact-select:focus,
+.contact-textarea:focus {
+  border-color: var(--text-primary);
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.contact-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: var(--text-light-gray);
+}
+
+.select-chevron-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text-secondary);
+}
+
+.form-submit-row {
+  width: 100%;
+}
+
+
+/* ==========================================================================
+   08. SECTION 5: SIDEBAR INFO CARDS & MAP
+   ========================================================================== */
+.contact-sidebar-column {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.contact-sidebar-card {
+  background-color: var(--bg-quaternary);
+  border: 1px solid var(--border-default);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sidebar-card-title {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.sidebar-info-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.info-icon-box {
+  flex-shrink: 0;
+  color: var(--text-primary);
+}
+
+.sidebar-svg-icon {
+  display: block;
+}
+
+.info-text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-text-label {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.info-text-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.info-text-link:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.info-text-sub {
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Map Card with Perspective Graphic & Button */
+.contact-map-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: .3s all;
+}
+.contact-map-card img {
+  transition: .3s all;
+}
+.btn-view-map {
+  transition: .3s all;
+}
+.contact-map-card::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #FBF9F966;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s all;
+}
+.contact-map-card:hover img {
+  scale: 1.1;
+}
+.contact-map-card:hover::after {
+  opacity: 0;
+  visibility: hidden;
+}
+.contact-map-card:hover .btn-view-map {
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+.map-perspective-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.map-perspective-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-mesh-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.btn-view-map {
+  position: relative;
+  z-index: 2;
+  background-color: var(--bg-default);
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn-view-map:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+
+/* ==========================================================================
+   09. SECTION 6: SITE FOOTER
+   ========================================================================== */
+.contact-site-footer {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.footer-logo-title {
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.footer-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.footer-nav-links a:hover {
+  color: var(--text-primary);
+}
+
+.footer-payments-heading {
+  font-weight: 600;
+  color: var(--text-light-gray);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.footer-payment-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-legal-text {
+  color: var(--text-light-gray);
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ==========================================================================
+   10. RESPONSIVE: DESKTOP MEDIA QUERY (>= 1024px)
+   1280px Baseline Fluid `vw` Scaling: val_in_px / 1280 * 100vw
+   Strict Serial Sequence matching HTML content order
+   ========================================================================== */
+@media (min-width: 1024px) {
+
+  /* Section 3: Hero */
+  .contact-section {
+    padding-bottom: 9.3750vw;
+  }
+  .contact-hero-area {
+    margin-bottom: 2.5000vw;
+  }
+  .contact-main-title {
+    font-size: 3.7500vw;
+    line-height: 4.0625vw;
+    letter-spacing: 0.0781vw;
+    margin-bottom: 1.8750vw;
+  }
+  .contact-main-subtitle {
+    font-size: 1.4063vw;
+    line-height: 2.1094vw;
+  }
+  /* Section 4: Grid Layout */
+  .contact-layout-grid {
+    gap: 1.8750vw;
+    align-items: flex-start;
+  }
+
+  .contact-form-column {
+    flex: 0 0 66%;
+    width: 66%;
+  }
+
+  .contact-form-card {
+    border-radius: 0.6250vw;
+    padding: 2.5000vw;
+    border-color: var(--border-default);
+    border-width: 0.0781vw;
+  }
+
+  .form-row-names {
+    gap: 1.2500vw;
+    margin-bottom: 1.8750vw;
+  }
+
+  .form-group {
+    margin-bottom: 1.8750vw;
+  }
+  .unify-btn-primary-md {
+    margin-top: 0.7031vw;
+  }
+  .form-row-names .form-group {
+    margin-bottom: 0;
+  }
+
+  .contact-label {
+    font-size: 0.9375vw;
+    line-height: 1.2500vw;
+    letter-spacing: 0.0781vw;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.3906vw;
+  }
+
+  .contact-input,
+  .contact-select {
+    height: 3.9844vw;
+    padding: 0 0.9375vw; 
+    font-size: 1.2500vw;
+    line-height: 1.2500vw;
+    font-weight: 400;
+    border-radius:0.3125vw;
+  }
+
+  .select-chevron-icon {
+    right: 0.9375vw; /* 12px */
+    width: 1.0938vw; /* 14px */
+    height: 1.0938vw;
+  }
+
+  .contact-textarea {
+    min-height: 19.5313vw;
+    padding: 1.1719vw 0.9375vw;
+    font-size: 1.2500vw;
+    line-height: 1.9531vw;
+    border-radius: 0.3125vw;
+  }
+
+  .form-submit-row {
+    margin-top: 1.5625vw; /* 20px */
+  }
+
+  /* Section 5: Sidebar */
+  .contact-sidebar-column {
+    flex: 0 0 calc(37% - 2.3438vw);
+    width: calc(37% - 2.3438vw);
+    gap: 2.5000vw;
+  }
+
+  .contact-sidebar-card {
+    border-radius: 0.6250vw;
+    padding: 1.8750vw;
+    border-width: 0.0781vw;
+  }
+  .sidebar-card-title {
+    font-size: 1.8750vw;
+    line-height: 2.5000vw;
+    margin-bottom: 1.8750vw;
+  }
+  .sidebar-info-item {
+    gap: 1.2500vw;
+    margin-bottom: 1.8750vw;
+  }
+  .sidebar-info-item:last-child {
+    margin-bottom: 0;
+  }
+  .sidebar-svg-icon {
+    width: 1.5625vw;
+    height: 1.5625vw;
+    margin-top: 0.1563vw; /* 2px */
+  }
+  .info-text-label {
+    font-size: 1.0938vw;
+    line-height: 1.2500vw;
+    margin-bottom: 0.6250vw;
+  }
+  .info-text-link,
+  .info-text-sub {
+    font-size: 1.2500vw;
+  }
+
+  .contact-map-card {
+    height: 19vw;
+    border-radius: 0.6250vw; /* 8px */
+  }
+
+  .btn-view-map {
+    height: 2.7344vw;
+    padding: 0.6250vw 1.2500vw;
+    font-size: 1.0938vw;
+    line-height: 1.2500vw;
+    letter-spacing: 0;
+  }
+
+  /* Section 6: Footer */
+  .contact-site-footer {
+    padding: 3.7500vw 0 2.8125vw 0; /* 48px 0 36px */
+  }
+
+  .footer-logo-title {
+    font-size: 1.4063vw; /* 18px */
+    margin-bottom: 1.2500vw; /* 16px */
+  }
+
+  .footer-nav-links {
+    gap: 1.5625vw; /* 20px */
+    margin-bottom: 1.8750vw; /* 24px */
+  }
+
+  .footer-nav-links a {
+    font-size: 0.9375vw; /* 12px */
+  }
+
+  .footer-payments-heading {
+    font-size: 0.7813vw; /* 10px */
+    margin-bottom: 0.9375vw; /* 12px */
+  }
+
+  .footer-payment-icons {
+    gap: 1.4063vw; /* 18px */
+    margin-bottom: 1.8750vw; /* 24px */
+  }
+
+  .payment-badge svg {
+    width: 2.9688vw; /* 38px */
+    height: 1.8750vw; /* 24px */
+  }
+
+  .footer-legal-text {
+    font-size: 0.7813vw; /* 10px */
+    max-width: 53.1250vw; /* 680px */
+  }
+}
+
+
+/* ==========================================================================
+   11. RESPONSIVE: TABLET MEDIA QUERY (768px to 1023.98px)
+   Clean `px` parameters in exact serial order
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+
+  /* Top Bar */
+  .contact-top-bar {
+    height: 32px;
+  }
+
+  .top-bar-item {
+    font-size: 11px;
+    gap: 8px;
+    line-height: 32px;
+  }
+
+  .top-bar-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .d-none-desktop {
+    display: none !important;
+  }
+
+  /* Header */
+  .contact-header {
+    padding: 16px 0;
+  }
+
+  .contact-logo {
+    font-size: 20px;
+  }
+
+  .contact-desktop-nav {
+    gap: 24px;
+  }
+
+  .contact-desktop-nav a {
+    font-size: 13px;
+  }
+
+  .btn-header-buy {
+    height: 36px;
+    padding: 0 18px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+
+  /* Hero */
+
+  .contact-hero-area {
+    margin-bottom: 24px;
+  }
+
+  .contact-main-title {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 8px;
+  }
+
+  .contact-main-subtitle {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  /* Layout */
+  .contact-layout-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-form-column,
+  .contact-sidebar-column {
+    width: 100%;
+  }
+
+  .contact-form-card {
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .form-row-names {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-row-names .form-group {
+    margin-bottom: 0;
+  }
+
+  .contact-label {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .contact-input,
+  .contact-select {
+    height: 42px;
+    padding: 0 12px;
+    font-size: 13px;
+    border-radius: 4px;
+  }
+
+  .select-chevron-icon {
+    right: 12px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .contact-textarea {
+    min-height: 130px;
+    padding: 12px;
+    font-size: 13px;
+    border-radius: 4px;
+  }
+
+  .form-submit-row {
+    margin-top: 18px;
+  }
+
+  /* Sidebar */
+  .contact-sidebar-column {
+    gap: 18px;
+  }
+
+  .contact-sidebar-card {
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .sidebar-card-title {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .sidebar-info-item {
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .sidebar-svg-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .info-text-label {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .info-text-link,
+  .info-text-sub {
+    font-size: 12px;
+  }
+
+  .contact-map-card {
+    height: 227px;
+    border-radius: 8px;
+  }
+
+  .btn-view-map {
+    height: 34px;
+    padding: 0 18px;
+    font-size: 11px;
+    border-radius: 4px;
+  }
+
+  /* Footer */
+  .contact-site-footer {
+    padding: 40px 0 30px 0;
+  }
+
+  .footer-logo-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .footer-nav-links {
+    gap: 18px;
+    margin-bottom: 20px;
+  }
+
+  .footer-nav-links a {
+    font-size: 12px;
+  }
+
+  .footer-payments-heading {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+
+  .footer-payment-icons {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .footer-legal-text {
+    font-size: 10px;
+    max-width: 600px;
+  }
+}
+
+
+/* ==========================================================================
+   12. RESPONSIVE: MOBILE MEDIA QUERY (<= 767.98px / <= 677px)
+   Exact pixel-perfect fidelity matching mobile mockup
+   Strict Serial Sequence matching HTML content order
+   ========================================================================== */
+@media (max-width: 767.98px) {
+
+  /* Section 3: Hero */
+  .contact-section {
+    padding: 48px 0;
+    padding-bottom: 80px;
+  }
+  .contact-main-title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+  .contact-main-subtitle {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 32px;
+  }
+
+  /* Section 4: Form (Single Column Stack) */
+  .contact-layout-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-form-column,
+  .contact-sidebar-column {
+    width: 100%;
+  }
+
+  .contact-form-card {
+    border-radius: 8px;
+    padding: 32px 20px;
+  }
+
+  .form-row-names {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  .contact-label {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+
+  .contact-input,
+  .contact-select {
+    height: 51px;
+    padding: 0 12px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  .unify-btn-primary-md {
+    width: 100%;
+  }
+
+  .select-chevron-icon {
+    right: 10px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .contact-textarea {
+    min-height: 120px;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+
+  .form-submit-row {
+    margin-top: 14px;
+  }
+
+  /* Section 5: Sidebar Cards */
+  .contact-sidebar-column {
+    gap: 14px;
+  }
+
+  .contact-sidebar-card {
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .sidebar-card-title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-info-item {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-svg-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .info-text-label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+  .info-text-link,
+  .info-text-sub {
+    font-size: 16px;
+  }
+
+  .contact-map-card {
+    height: 227px;
+    border-radius: 8px;
+  }
+
+  .btn-view-map {
+    height: 32px;
+    padding: 0 16px;
+    font-size: 10px;
+    border-radius: 4px;
+  }
+
+  /* Section 6: Footer (2x2 Grid) */
+  .contact-site-footer {
+    padding: 32px 0 24px 0;
+  }
+
+  .footer-logo-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .footer-nav-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    max-width: 260px;
+    margin: 0 auto 16px auto;
+  }
+
+  .footer-nav-links a {
+    font-size: 11px;
+  }
+
+  .footer-payments-heading {
+    font-size: 9px;
+    margin-bottom: 10px;
+  }
+
+  .footer-payment-icons {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .payment-badge svg {
+    width: 34px;
+    height: 22px;
+  }
+
+  .footer-legal-text {
+    font-size: 9px;
+    padding: 0 10px;
+  }
+}

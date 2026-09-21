@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed - Unify CMS V6</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Self-Contained Checkout Stylesheet -->
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/confirmation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="confirmation-page landing-page">
+
+  <!-- SITE HEADER -->
+  <header class="site-header-unify header-section subpage-header-section">
+    <section class="landing-header has-checkout-stepper">
+      <div
+        class="container-unify landing-container header-unify-wrapper has-checkout-stepper d-flex align-items-center justify-content-between">
+        <a class="brand-unify landing-logo" href="index.html">
+          <img src="images/logo.svg" alt="UNIFY CMS V6">
+        </a>
+
+        <div class="checkout-stepper">
+          <div class="step already-active">
+            <span class="step-num step-outline">1</span>
+            <span class="step-text">Shipping Info</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step already-active">
+            <span class="step-num step-outline">2</span>
+            <span class="step-text">Finish Order</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step active">
+            <span class="step-num step-filled">3</span>
+            <span class="step-text">Summary</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="confirm-main-area">
+    <section class="landing-section unify-confirmation-section">
+      <div class="landing-container">
+  
+        <!-- Step 2.1: Success Badge & Order Confirmation Headline -->
+        <div class="confirm-hero-area text-center">
+          <div class="confirm-badge-box">
+             <img src="images/Success-Icon.svg" alt="Success" class="confirm-check-svg">
+           </div>
+  
+          <h1 class="confirm-main-title">Order Confirmed!</h1>
+          <p class="confirm-main-subtitle">
+            Thank you for your purchase, John! Your order <strong>#UCMS-882910</strong> is being processed and will be shipped shortly.
+          </p>
+        </div>
+  
+        <!-- Step 2.2: Order Summary Card -->
+        <div class="confirm-card-wrapper">
+          <div class="confirm-summary-card">
+            <div class="summary-card-header">Order Summary</div>
+            
+            <div class="confirm-card-divider"></div>
+  
+            <!-- Product Line Item -->
+            <div class="confirm-product-row">
+              <div class="product-thumbnail-box">
+                <img src="images/placeholder-product.svg" alt="Product" class="product-placeholder-icon">
+              </div>
+              <div class="product-info-col">
+                <div class="product-title-text">Package 1 Name</div>
+                <div class="product-variant-text">Variant A Description</div>
+                <div class="product-price-text">$29.99</div>
+              </div>
+            </div>
+               <div class="confirm-product-row">
+              <div class="product-thumbnail-box">
+                <img src="images/placeholder-product.svg" alt="Product" class="product-placeholder-icon">
+              </div>
+              <div class="product-info-col">
+                <div class="product-title-text">Unify CMS Upsell Product Name</div>
+                <div class="product-variant-text">Upsell Description</div>
+                <div class="product-price-text">$14.99</div>
+              </div>
+            </div>
+  
+            <div class="confirm-card-divider"></div>
+  
+            <!-- Financial Breakdown -->
+            <div class="confirm-breakdown-area">
+              <div class="breakdown-row">
+                <span class="breakdown-label">Subtotal</span>
+                <span class="breakdown-value">$129.99</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Discount (SAVE20)</span>
+                <span class="breakdown-value">-$26.00</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="breakdown-label">Shipping</span>
+                <span class="breakdown-value text-success fw-bold">FREE</span>
+              </div>
+            </div>
+  
+            <div class="confirm-card-divider"></div>
+  
+            <!-- Grand Total -->
+            <div class="confirm-total-row">
+              <span class="total-label-text">Grand Total</span>
+              <span class="total-amount-text">$44.98</span>
+            </div>
+  
+            <!-- 90-Day Guarantee Callout -->
+            <div class="confirm-guarantee-box">
+              <div class="guarantee-icon-wrap">
+                <img src="images/icon-guarantee-shield.svg" alt="Guarantee" class="guarantee-badge-svg">
+              </div>
+              <div class="guarantee-content-wrap">
+                <div class="guarantee-title-text">90-Day Money Back Guarantee</div>
+                <div class="guarantee-desc-text">
+                  If you're not 100% satisfied with your product within 90 days, we'll refund every penny. No fuss, and no questions asked.
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- Step 2.3: Details Columns (Shipping Address & Customer Support) -->
+        <div class="confirm-details-wrapper">
+          <div class="confirm-details-row">
+            
+            <!-- Shipping Address Card -->
+            <div class="confirm-info-card">
+              <div class="info-card-title">SHIPPING ADDRESS</div>
+              <div class="info-card-content">
+                Jane Doe<br>
+                123 Corporate Way, Suite 400<br>
+                Palo Alto, CA 94301<br>
+                United States
+              </div>
+            </div>
+  
+            <!-- Customer Support Card -->
+            <div class="confirm-info-card">
+              <div class="info-card-title">CUSTOMER SUPPORT</div>
+              <div class="info-card-content">
+                Need assistance? Our team is here to help 24/7.<br><br>
+                <a href="mailto:support@mail.com" class="support-mail-link">support@mail.com</a>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- Step 2.4: Continue Browsing CTA Button -->
+        <div class="confirm-cta-area text-center">
+          <a href="index.html" class="unify-btn-primary-md">
+            CONTINUE BROWSING
+          </a>
+        </div>
+  
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer-unify footer-section section-padding-unify">
+    <div class="container-unify">
+      <div class="row gy-5">
+        <div class="col-lg-12 d-flex flex-column align-items-center text-center">
+          <a class="brand-unify d-block landing-mb-40" href="/">
+            <img src="images/footer-logo.svg" alt="" srcset="">
+          </a>
+          <div class="landing-footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Refund Policy</a>
+          </div>
+          <span class="secure-payment-text">SECURE PAYMENTS VIA</span>
+          <div class="payment-card-holder">
+            <img src="images/vs.svg" alt="" srcset="">
+            <img src="images/mc.svg" alt="" srcset="">
+            <img src="images/ae.svg" alt="" srcset="">
+            <img src="images/pp.svg" alt="" srcset="">
+          </div>
+          <h6 class="footer-subtext-unify mb-0 mt-3">&copy; 2026 Unify CMS. All rights reserved. Statements not evaluated by the FDA. Not intended to diagnose, treat, cure, or prevent any
+disease. Results may vary based on implementation and traffic quality.</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* upsell.css */
+
+/* Header shell (.header-section) and .checkout-stepper styling now live only
+   in css/style.css ("SITE HEADER — SHARED" / "SITE HEADER — CHECKOUT PAGE
+   ONLY") - no page should redefine them here. The .upsell-top-bar below is
+   NOT part of that shared shell (it's this page's own promotional strip
+   above the header), so it stays page-specific on purpose. */
+
+.upsell-page .upsell-top-bar {
+  background-color: var(--color-error-dark);
+  color: var(--bg-primary);
+  padding: 0.8vw 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.0938vw;
+  letter-spacing: 0.05vw;
+  text-transform: uppercase;
+}
+
+.upsell-page .upsell-main {
+    padding: 3.5vw 0 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upsell-page .upsell-alert-headline {
+    font-size: 2.8125vw;
+    text-align: center;
+    margin-bottom: 0.9vw;
+    color: var(--text-primary);
+}
+
+.upsell-page .upsell-alert-headline .headline-arrow {
+    display: inline-block;
+    width: 1.5em;
+    text-align: center;
+}
+
+.upsell-page .upsell-alert-headline .alert-red {
+  color: var(--color-error-dark);
+}
+
+.upsell-page .upsell-subheadline {
+  font-weight: 500;
+  font-size: 1.5625vw;
+  text-align: center;
+  margin-bottom: 3vw;
+  color: #444;
+}
+
+.upsell-page .upsell-subheadline .free-text {
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.upsell-page .upsell-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5vw;
+    padding: 3.6vw 4vw;
+    max-width: 71vw;
+    width: 100%;
+    box-shadow: 0 1vw 3vw rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upsell-page .upsell-card-title {
+  font-weight: 800;
+  font-size: 2.3438vw;
+  text-align: center;
+  margin-bottom: 1.5vw;
+  color: var(--text-primary);
+}
+
+.upsell-page .upsell-card-desc {
+    text-align: center;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 3vw;
+    max-width: 90%;
+}
+
+.upsell-page .upsell-image-placeholder {
+    background-color: var(--border-color);
+    width: 100%;
+    height: 25vw;
+    border-radius: 0.3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    margin-bottom: 3.6vw;
+}
+.upsell-page .upsell-image-placeholder img {
+    opacity: 0.3;
+    width: 4.6667vw;
+    height: 4.6667vw;
+}
+
+.upsell-page .upsell-image-placeholder svg {
+  width: 4vw;
+  height: 4vw;
+  margin-bottom: 1vw;
+}
+
+.upsell-page .upsell-image-placeholder span {
+    font-size: 1.1vw;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.upsell-page .pricing-row {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 4vw;
+    margin-bottom: 2.5vw;
+}
+
+.upsell-page .price-block {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.upsell-page .price-label {
+  font-size: 1.0938vw;
+  font-weight: 700;
+  letter-spacing: 0.1vw;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 0vw;
+}
+
+.upsell-page .retail-price {
+  font-size: 3.7500vw;
+  font-weight: 800;
+  color: #999;
+  text-decoration: line-through;
+  text-decoration-color: var(--color-error-dark);
+  text-decoration-thickness: 0.2vw;
+}
+
+.upsell-page .offer-price {
+  font-size: 4.6875vw;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.upsell-page .btn-upsell-cta {
+    background-color: var(--bg-dark);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 0.5vw;
+    padding: 1.5vw 4vw;
+    font-weight: 800;
+    letter-spacing: 0.1vw;
+    cursor: pointer;
+    width: 56%;
+    max-width: 40vw;
+    transition: background-color 0.2s ease;
+    margin-bottom: 1.2vw;
+}
+
+.upsell-page .btn-upsell-cta:hover {
+  background-color: #4d4d4d;
+}
+
+.upsell-page .free-shipping-note {
+  font-size: var(--p-fs);
+  font-weight: 600;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.upsell-page .free-shipping-note img {
+    width: 1.2vw;
+    height: 1.2vw;
+    opacity: 0.8;
+}
+
+.upsell-page .no-thanks-link {
+    font-size: 1.0938vw;
+    font-weight: 500;
+    color: #666;
+    text-decoration: underline;
+    margin-top: 3.1vw;
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+    cursor: pointer;
+}
+
+.upsell-page .no-thanks-link:hover {
+  color: var(--text-primary);
+}
+
+.upsell-page .no-thanks-link svg {
+  width: 1vw;
+  height: 1vw;
+}

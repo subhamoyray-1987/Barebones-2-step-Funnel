@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Preview - Unify CMS V6</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Slick Slider CDN (disabled for now - uncomment to re-enable the feedback slider) -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"> -->
+ <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- This page only exists to preview the order-error popup on top of the
+       checkout background, so its one-off "Test Popup" button lives here
+       instead of in a shared CSS file. -->
+  <style>
+    .test-popup-btn {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1100;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: var(--bg-dark);
+      color: var(--bg-primary);
+      border: none;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+    .test-popup-btn-icon {
+      font-size: 16px;
+      line-height: 1;
+    }
+  </style>
+</head>
+
+<body class=" landing-page checkout-page">
+
+  <!-- TOP BAR -->
+  
+<div class="landing-top-bar subpage-top-bar">
+    <div class="landing-container d-flex align-items-center justify-content-center landing-top-bar-inner ">
+      <div class="landing-top-bar-marquee">
+        <div class="landing-top-bar-track">
+          <div class="landing-top-bar-content">
+            <img src="images/timer.svg" alt="Discount Offer" class="top-bar-icon">
+            <span>YOUR SPECIAL 50% OFF SAVINGS WITH FREE SHIPPING DISCOUNT EXPIRES IN: <span class="countdown-timer">09:59</span></span>
+          </div>
+          <div class="landing-top-bar-content marquee-clone" aria-hidden="true">
+            <img src="images/timer.svg" alt="Discount Offer" class="top-bar-icon">
+            <span>YOUR SPECIAL 50% OFF SAVINGS WITH FREE SHIPPING DISCOUNT EXPIRES IN: <span class="countdown-timer">09:59</span></span>
+          </div>
+          <div class="landing-top-bar-content marquee-clone" aria-hidden="true">
+            <img src="images/timer.svg" alt="Discount Offer" class="top-bar-icon">
+            <span>YOUR SPECIAL 50% OFF SAVINGS WITH FREE SHIPPING DISCOUNT EXPIRES IN: <span class="countdown-timer">09:59</span></span>
+          </div>
+          <div class="landing-top-bar-content marquee-clone" aria-hidden="true">
+            <img src="images/timer.svg" alt="Discount Offer" class="top-bar-icon">
+            <span>YOUR SPECIAL 50% OFF SAVINGS WITH FREE SHIPPING DISCOUNT EXPIRES IN: <span class="countdown-timer">09:59</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SITE HEADER -->
+  <header class="site-header-unify header-section subpage-header-section">
+    <section class="landing-header has-checkout-stepper">
+      <div
+        class="container-unify landing-container header-unify-wrapper has-checkout-stepper d-flex align-items-center justify-content-between">
+        <a class="brand-unify landing-logo" href="index.html">
+          <img src="images/logo.svg" alt="UNIFY CMS V6">
+        </a>
+
+        <div class="checkout-stepper">
+          <div class="step ">
+            <span class="step-num step-outline">1</span>
+            <span class="step-text">Shipping Info</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step active">
+            <span class="step-num step-filled">2</span>
+            <span class="step-text">Finish Order</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step">
+            <span class="step-num step-outline">3</span>
+            <span class="step-text ">Summary</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="checkout-main landing-section">
+    <div class="container-unify landing-container">
+      <h2 class="checkout-page-title text-center">CHOOSE YOUR DESIRED PACKAGE</h2>
+
+      <div class="row checkout-layout">
+        <!-- LEFT COLUMN -->
+        <div class="col-12 col-md-7 left-col">
+
+          <!-- Package 1 -->
+          <div class="package-card selected-package">
+            <div class="package-header">
+              <label class="package-radio">
+                <input type="checkbox" checked>
+                <span class="package-title-small">GLP-1 CAPSULES</span>
+              </label>
+              <span class="free-shipping-badge">
+                <img src="images/free-shipping-select.svg" alt="Free Shipping" class="free-shipping-icon">
+                FREE SHIPPING
+              </span>
+            </div>
+            <div class="package-body d-flex align-items-start">
+              <div class="package-image">
+                <img src="images/placeholder-product.svg" alt="Package 1">
+              </div>
+              <div class="package-info">
+                <h2 class="package-name">Package 1 Name</h2>
+                  <p class="package-desc">Variant A Description</p>
+              </div>
+              <div class="package-price-action text-end">
+                <div class="package-price">$29.99</div>
+                <button class="selct-button btn-selected">SELECTED</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 2 -->
+          <div class="package-card">
+            <div class="package-header unselected-header">
+              <label class="package-radio">
+                <input type="checkbox">
+                <span class="package-title-small">GLP-1 CAPSULES + CLEANSE</span>
+              </label>
+              <span class="free-shipping-badge text-muted">
+                <img src="images/free-shipping-unselect.svg" alt="Free Shipping" class="free-shipping-icon">
+                FREE SHIPPING
+              </span>
+            </div>
+            <div class="package-body d-flex align-items-start">
+              <div class="package-image">
+                <img src="images/placeholder-product.svg" alt="Package 2">
+              </div>
+              <div class="package-info">
+                <h2 class="package-name">Package 2 Name</h2>
+                  <p class="package-desc">Variant B Description</p>
+              </div>
+              <div class="package-price-action text-end">
+                <div class="package-price">$59.99</div>
+                <button class="btn-select">SELECT</button>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="cross-sell-title">You may also like...</h4>
+
+          <div class="cross-sell-list">
+            <div class="cross-sell-item d-flex align-items-center">
+              <div class="cross-sell-img">
+                <img src="images/placeholder-product.svg" alt="Cross-Sell 1">
+              </div>
+              <div class="cross-sell-info">
+                <div class="cross-sell-name">Cross-Sell 1 Product Name</div>
+                <div class="cross-sell-price">$12.99</div>
+              </div>
+              <button class="btn-remove landing-btn-action landing-btn-sm">REMOVE</button>
+            </div>
+            <div class="cross-sell-item d-flex align-items-center">
+              <div class="cross-sell-img">
+                <img src="images/placeholder-product.svg" alt="Cross-Sell 2">
+              </div>
+              <div class="cross-sell-info">
+                <div class="cross-sell-name">Cross-Sell 2 Product Name</div>
+                <div class="cross-sell-price">$12.99</div>
+              </div>
+              <button class="btn-add landing-btn-action landing-btn-sm">ADD</button>
+            </div>
+            <div class="cross-sell-item d-flex align-items-center">
+              <div class="cross-sell-img">
+                <img src="images/placeholder-product.svg" alt="Cross-Sell 3">
+              </div>
+              <div class="cross-sell-info">
+                <div class="cross-sell-name">Cross-Sell 3 Product Name</div>
+                <div class="cross-sell-price">$12.99</div>
+              </div>
+              <button class="btn-add landing-btn-action landing-btn-sm">ADD</button>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-12 col-md-5 right-col">
+          <div class="payment-card-container">
+            <div class="payment-header">
+              <h4>PAYMENT INFORMATION</h4>
+              <p>FINAL STEP!</p>
+            </div>
+            <div class="payment-body">
+              <div class="express-checkout d-flex gap-2 mb-3">
+
+                <img src="images/button-paypal.svg" alt="PayPal">
+                <img src="images/button-applepay.svg" alt="Apple Pay">
+              </div>
+
+              <div class="divider">
+                <span>OR PAY WITH CARD</span>
+              </div>
+
+              <div class="card-icons d-flex justify-content-center align-items-center gap-2 mb-4 mt-3">
+                <img src="images/visa-colored.svg" alt="Visa">
+                <img src="images/mastercard-colored.svg" alt="Mastercard">
+                <img src="images/discover-colored.svg" alt="Discover">
+                <img src="images/americanexpress-colored.svg" alt="Amex">
+              </div>
+
+              <label class="billing-checkbox d-flex align-items-center mb-4">
+                <input type="checkbox" checked class="custom-checkbox me-2">
+                <span>Billing address same as shipping address</span>
+              </label>
+              <div id="billing-form-container" style="display: none; padding-bottom: 24px;">
+                <div class="landing-form-group">
+                  <label class="landing-form-label">BILLING FIRST NAME</label>
+                  <input type="text" class="landing-form-input" placeholder="Jane">
+                </div>
+                <div class="landing-form-group">
+                  <label class="landing-form-label">BILLING LAST NAME</label>
+                  <input type="text" class="landing-form-input" placeholder="Doe">
+                </div>
+                <div class="landing-form-group">
+                  <label class="landing-form-label">BILLING EMAIL ADDRESS</label>
+                  <input type="email" class="landing-form-input" placeholder="jane@example.com">
+                </div>
+                <div class="landing-form-group">
+                  <label class="landing-form-label">BILLING PHONE NUMBER</label>
+                  <input type="tel" class="landing-form-input" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="landing-form-group">
+                  <label class="landing-form-label">BILLING STREET ADDRESS</label>
+                  <input type="text" class="landing-form-input" placeholder="123 Business Way">
+                </div>
+                <div class="landing-form-group">
+                  <label class="landing-form-label">BILLING CITY</label>
+                  <input type="text" class="landing-form-input" placeholder="">
+                </div>
+                <div class="row landing-form-row">
+                  <div class="col-12 col-md-6">
+                    <label class="landing-form-label">BILLING STATE</label>
+                    <input type="text" class="landing-form-input" placeholder="">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="landing-form-label">BILLING ZIP CODE</label>
+                    <input type="text" class="landing-form-input" placeholder="">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-group mb-4 position-relative">
+                <label class="form-label-small">CARD NUMBER</label>
+                <input type="text" class="form-control-custom" placeholder="1234 5678 9012 3456">
+                <img src="images/icon-lock.svg" alt="Secure" class="lock-icon">
+              </div>
+
+              <div class="d-flex gap-3 mb-4">
+                <div class="flex-fill w-50">
+                  <label class="form-label-small">EXPIRY DATE</label>
+                  <input type="text" class="form-control-custom error-input" placeholder="MM / YY">
+                  <div class="error-msg">Enter your expiry date</div>
+                </div>
+                <div class="flex-fill w-50">
+                  <div class="d-flex justify-content-between">
+                    <label class="form-label-small">CVV</label>
+                    <a href="#" class="whats-this-link">WHAT'S THIS?</a>
+                  </div>
+                  <input type="text" class="form-control-custom error-input" placeholder="CVV">
+                  <div class="error-msg">Enter your CVV</div>
+                </div>
+              </div>
+
+              <div class="form-group coupon-box">
+                <label class="form-label-small">COUPON / GIFT CARD</label>
+                <div class="d-flex gap-2">
+                  <input type="text" class="form-control-custom flex-grow-1">
+                  <button class="btn-apply">APPLY</button>
+                </div>
+              </div>
+
+            
+
+              <button class="btn-rush-order w-100 position-relative mb-4">
+                RUSH MY ORDER
+              </button>
+
+              <div class="trust-badges d-flex">
+                <img src="images/mcafee-secure.svg" alt="">
+                <img src="images/norton.svg" alt="">
+                <img src="images/truste.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="guarantee-box d-flex align-items-start">
+        <div class="guarantee-badge">
+          <img src="images/checkout-moneyback-badge.svg" alt="" srcset="">
+        </div>
+        <div class="guarantee-text ms-2 mt-1">
+          <h4>YOU'RE PROTECTED BY OUR 30-DAY MONEY BACK GUARANTEE!</h4>
+          <p>Simply put, if you don't see the results you wish for, send us an email or give us a call within the
+            next month and we will return everything you paid. That's how confident we are in the quality of our
+            products and the transformative potential of our formulation.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="landing-section landing-feedback">
+      <div class="container-unify landing-container mb-5">
+        <div class="landing-feedback-grid landing-feedback-slider">
+          <div class="landing-feedback-slide">
+            <div class="landing-feedback-card">
+              <div class="landing-stars">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+              </div>
+              <p class="landing-feedback-quote">"Lorem ipsum dolor sit amet consectet tortor diam bibendum volutpat nisl
+                urna iaculis sollicitudin."</p>
+              <div class="landing-testimonial-author">
+                <div class="landing-author-avatar">
+                  <img src="images/avatar-user.svg" alt="David S.">
+                </div>
+                <div class="landing-author-info">
+                  <strong>David S.</strong>
+                  <span>Tech Lead, ScaleMatrix</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="landing-feedback-slide">
+            <div class="landing-feedback-card">
+              <div class="landing-stars">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+              </div>
+              <p class="landing-feedback-quote">"Lorem ipsum dolor sit amet consectet tortor diam bibendum volutpat nisl
+                urna iaculis sollicitudin."</p>
+              <div class="landing-testimonial-author">
+                <div class="landing-author-avatar">
+                  <img src="images/avatar-user.svg" alt="Sarah L.">
+                </div>
+                <div class="landing-author-info">
+                  <strong>Sarah L.</strong>
+                  <span>Founder, BrightPath</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="landing-feedback-slide">
+            <div class="landing-feedback-card">
+              <div class="landing-stars">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+                <img src="images/icon-star.svg" alt="Star" class="star-icon">
+              </div>
+              <p class="landing-feedback-quote">"Lorem ipsum dolor sit amet consectet tortor diam bibendum volutpat nisl
+                urna iaculis sollicitudin."</p>
+              <div class="landing-testimonial-author">
+                <div class="landing-author-avatar">
+                  <img src="images/avatar-user.svg" alt="Marcus K.">
+                </div>
+                <div class="landing-author-info">
+                  <strong>Marcus K.</strong>
+                  <span>Product Manager, OmniFlow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+  <!-- ORDER ERROR MODAL -->
+  <button type="button" class="test-popup-btn" id="testPopupBtn">
+    <span class="test-popup-btn-icon" aria-hidden="true">&#8635;</span>
+    Test Popup
+  </button>
+
+  <div class="order-error-overlay active" id="orderErrorOverlay">
+    <div class="order-error-modal">
+      <button type="button" class="order-error-close" id="orderErrorClose" aria-label="Close">
+        <img src="images/icon-close.svg" alt="Close">
+      </button>
+      <h3 class="order-error-title">Something went wrong...</h3>
+      <p class="order-error-text">
+        We couldn't complete your order right now due to a temporary connection issue. Please try again or contact
+        support <a href="mailto:sales@mystore.com">sales@mystore.com</a> if the problem persists.
+      </p>
+      <div class="order-error-code">CRM_SYNC_TIMEOUT</div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer-unify footer-section section-padding-unify">
+    <div class="container-unify">
+      <div class="row gy-5">
+        <div class="col-lg-12 d-flex flex-column align-items-center text-center">
+          <a class="brand-unify d-block landing-mb-40" href="/">
+            <img src="images/footer-logo.svg" alt="" srcset="">
+          </a>
+          <div class="landing-footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Refund Policy</a>
+          </div>
+          <span class="secure-payment-text">SECURE PAYMENTS VIA</span>
+          <div class="payment-card-holder">
+            <img src="images/vs.svg" alt="" srcset="">
+            <img src="images/mc.svg" alt="" srcset="">
+            <img src="images/ae.svg" alt="" srcset="">
+            <img src="images/pp.svg" alt="" srcset="">
+          </div>
+          <h6 class="footer-subtext-unify mb-0 mt-3">&copy; 2026 Unify CMS. All rights reserved. Statements not evaluated by the FDA. Not intended to diagnose, treat, cure, or prevent any
+disease. Results may vary based on implementation and traffic quality.</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <!-- Slick Slider JS (disabled for now - uncomment to re-enable the feedback slider) -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
+
+    <script src="./js/custom.js"></script>
+</body>

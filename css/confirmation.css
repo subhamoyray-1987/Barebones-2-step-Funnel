@@ -1,0 +1,741 @@
+/* ==========================================================================
+   UNIFY CMS V6 - ORDER CONFIRMATION PAGE STYLESHEET (ALL-IN-ONE STANDALONE)
+   Written Clean & Section-and-Content Serial-Wise
+   1280px Artboard Baseline with Fluid `vw` Scaling on Desktop (>= 1024px)
+   Standard `px` for Tablet (768px-1023.98px) and Mobile (<= 767.98px)
+   ========================================================================== */
+
+/* Design tokens (colors, spacing, font vars) come from css/root.css, which
+   this page already loads - no need to redefine :root here. */
+
+/* Standalone Utility Classes */
+.d-flex { display: flex !important; }
+.align-items-center { align-items: center !important; }
+.justify-content-between { justify-content: space-between !important; }
+.justify-content-center { justify-content: center !important; }
+.text-center { text-align: center !important; }
+.text-success { color: var(--color-success) !important; font-weight: 600; }
+.fw-bold { font-weight: 700 !important; }
+/* .landing-container width/breakpoints come from css/root.css + css/style.css
+   + css/responsive.css - not redefined per page. */
+/* ==========================================================================
+   04. SECTION 2: HERO & SUCCESS BADGE
+   ========================================================================== */
+.confirm-main-area {
+  background-color: var(--bg-default);
+  width: 100%;
+}
+.confirm-hero-area {
+  width: 100%;
+}
+.confirm-badge-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.confirm-check-circle {
+  background-color: var(--color-success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirm-check-svg {
+  display: block;
+  width: 6.2500vw;
+  height: 6.2500vw;
+}
+.confirm-main-title {
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+.confirm-main-subtitle {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+}
+.confirm-main-subtitle strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+/* ==========================================================================
+   05. SECTION 3: ORDER SUMMARY CARD
+   ========================================================================== */
+.confirm-card-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.confirm-summary-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+.summary-card-header {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.confirm-card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+}
+.confirm-product-row {
+  display: flex;
+  align-items: center;
+}
+.product-thumbnail-box {
+  background-color: #ECEAEA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.product-placeholder-icon {
+    display: block;
+    opacity: 0.3;
+}
+.product-info-col {
+  display: flex;
+  flex-direction: column;
+}
+.product-title-text {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.product-variant-text {
+  color: var(--text-secondary);
+}
+.product-price-text {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.confirm-breakdown-area {
+  display: flex;
+  flex-direction: column;
+}
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.breakdown-label {
+  color: var(--text-secondary);
+}
+.breakdown-value {
+  color: var(--text-primary);
+  font-weight: 400;
+}
+.confirm-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total-label-text {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.total-amount-text {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+.confirm-guarantee-box {
+  background-color: var(--bg-quaternary);
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.guarantee-icon-wrap {
+  flex-shrink: 0;
+}
+.guarantee-badge-svg {
+  display: block;
+}
+.guarantee-content-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.guarantee-title-text {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.guarantee-desc-text {
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+/* ==========================================================================
+   06. SECTION 4: SHIPPING & SUPPORT INFO CARDS
+   ========================================================================== */
+.confirm-details-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.confirm-details-row {
+  display: flex;
+  width: 100%;
+}
+.confirm-info-card {
+  background-color: transparent;
+  border: 1px solid var(--border-default);
+  box-sizing: border-box;
+}
+.info-card-title {
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+.info-card-content {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.support-mail-link {
+  color: var(--text-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+.support-mail-link:hover {
+  text-decoration: underline;
+}
+/* ==========================================================================
+   07. SECTION 5: CONTINUE BROWSING CTA
+   ========================================================================== */
+.confirm-cta-area {
+  width: 100%;
+}
+
+/* ==========================================================================
+   08. SECTION 6: SITE FOOTER
+   ========================================================================== */
+.confirm-site-footer {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+}
+.footer-logo-title {
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.footer-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer-nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+.footer-nav-links a:hover {
+  color: var(--text-primary);
+}
+.footer-payments-heading {
+  font-weight: 600;
+  color: var(--text-light-gray);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.footer-payment-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-legal-text {
+  color: var(--text-light-gray);
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ==========================================================================
+   09. RESPONSIVE: DESKTOP MEDIA QUERY (>= 1024px)
+   1280px Baseline Fluid `vw` Scaling: val_in_px / 1280 * 100vw
+   Strict Serial Sequence matching HTML content order
+   ========================================================================== */
+@media (min-width: 1024px) {
+  /* Section 2: Main Area */
+  .confirm-hero-area {
+    margin-bottom: 2.5000vw;
+  }
+  .confirm-badge-box {
+    width: 6.2500vw;
+    height: 6.2500vw;
+    border-width: 0.0781vw;
+    border-radius: 0.9375vw;
+    margin-bottom: 2.5000vw;
+  }
+  .confirm-check-circle {
+    width: 3.1250vw;
+    height: 3.1250vw;
+  }
+ 
+  .confirm-main-title {
+    font-size: 3.7500vw;
+    line-height: 4.6094vw;
+    margin-bottom: 1.8750vw;
+  }
+  .confirm-main-subtitle {
+    font-size: 1.4063vw;
+    line-height: 2.1875vw;
+    max-width: 54.6875vw;
+  }
+  /* Section 3: Order Summary Card */
+  .confirm-card-wrapper {
+    margin-bottom: 2.5000vw;
+  }
+  .confirm-summary-card {
+    border-radius: 0.6250vw;
+    padding: 2.5781vw;
+    max-width: 54.6875vw;
+    border-color: var(--border-default);
+  }
+  .summary-card-header {
+    font-size: 1.8750vw;
+    line-height: 2.5000vw;
+    font-weight: 700;
+    margin-bottom: 1.2500vw;
+  }
+  .confirm-card-divider {
+    margin: 1.2500vw 0;
+  }
+  .confirm-product-row {
+    gap: 1.2500vw;
+    margin: 2.5000vw 0;
+  }
+  .product-thumbnail-box {
+    width: 7.5000vw;
+    height: 7.5000vw;
+    border-radius: 0.3125vw; /* 4px */
+  }
+  .product-placeholder-icon {
+    width: 2.1875vw; /* 28px */
+    height: 2.1875vw;
+    opacity: 0.3;
+  }
+  .product-title-text {
+    font-size: 1.2500vw;
+    line-height: 1.8750vw;
+    margin-bottom: 0.6250vw;
+    font-weight: 700;
+  }
+  .product-variant-text {
+    font-size: 0.9375vw;
+    line-height: 1.2500vw;
+    font-weight: 500;
+    margin-bottom: 1.9vw;
+  }
+  .product-price-text {
+    font-size: 1.2500vw;
+    line-height: 1.8750vw;
+  }
+  .confirm-breakdown-area {
+    gap: 0.9375vw;
+  }
+  .breakdown-row {
+    font-size: 1.2500vw;
+    line-height: 1.9531vw;
+  }
+  .confirm-total-row {
+    font-size: 1.8750vw;
+    line-height: 2.5000vw;
+    font-weight: 700;
+    margin-bottom: 1.2500vw; /* 16px */
+  }
+  .confirm-guarantee-box {
+    border-radius: 0.3125vw; 
+    padding: 1.5625vw;
+    gap: 1.2500vw;
+    border: 0.0781vw solid var(--border-default);
+  }
+  .guarantee-badge-svg {
+    width: 1.5625vw; /* 20px */
+    height: 1.5625vw;
+  }
+  .guarantee-title-text {
+    font-size: 1.2500vw;
+    line-height: 1.8750vw;
+    margin-bottom: 0.6250vw;
+  }
+  .guarantee-desc-text {
+    font-size: 0.9375vw;
+    line-height: 1.4063vw;
+  }
+  /* Section 4: Details Cards */
+  .confirm-details-wrapper {
+    margin-bottom: 2.3438vw; /* 30px */
+  }
+  .confirm-details-row {
+    max-width: 54.6875vw;
+    gap: 1.2500vw;
+  }
+  .confirm-info-card {
+    flex: 1;
+    border-radius: 0.6250vw;
+    padding: 1.8750vw;
+  }
+  .info-card-title {
+    font-size: 1.0938vw;
+    line-height: 1.2500vw;
+    letter-spacing: 0;
+    margin-bottom: 1.2500vw;
+    text-transform: uppercase;
+  }
+  .info-card-content {
+    font-size: 1.2500vw;
+    line-height: 1.9531vw;
+  }
+  .support-mail-link {
+    font-size: 1.0938vw;
+    line-height: 1.2500vw;
+  }
+  /* Section 5: Continue CTA */
+  .confirm-cta-area {
+    margin-top: 3.7500vw;
+    margin-bottom: 3.1250vw;
+  }
+
+  /* Section 6: Site Footer */
+  .confirm-site-footer {
+    padding: 3.7500vw 0 2.8125vw 0; /* 48px 0 36px */
+  }
+  .footer-logo-title {
+    font-size: 1.4063vw; /* 18px */
+    margin-bottom: 1.2500vw; /* 16px */
+  }
+  .footer-nav-links {
+    gap: 1.5625vw; /* 20px */
+    margin-bottom: 1.8750vw; /* 24px */
+  }
+  .footer-nav-links a {
+    font-size: 0.9375vw; /* 12px */
+  }
+  .footer-payments-heading {
+    font-size: 0.7813vw; /* 10px */
+    margin-bottom: 0.9375vw; /* 12px */
+  }
+  .footer-payment-icons {
+    gap: 1.4063vw; /* 18px */
+    margin-bottom: 1.8750vw; /* 24px */
+  }
+  .payment-badge svg {
+    width: 2.9688vw; /* 38px */
+    height: 1.8750vw; /* 24px */
+  }
+  .footer-legal-text {
+    font-size: 0.7813vw; /* 10px */
+    max-width: 53.1250vw; /* 680px */
+  }
+}
+/* ==========================================================================
+   10. RESPONSIVE: TABLET MEDIA QUERY (768px to 1023.98px)
+   Clean `px` parameters in exact serial order
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  /* Main Area */
+  .confirm-hero-area {
+    margin-bottom: 24px;
+  }
+  .confirm-badge-box {
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+  }
+  .confirm-check-circle {
+    width: 32px;
+    height: 32px;
+  }
+  .confirm-check-svg {
+    width: 6.2500vw;
+  height: 6.2500vw;
+  }
+  .confirm-main-title {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 8px;
+  }
+  .confirm-main-subtitle {
+    font-size: 13px;
+    line-height: 18px;
+    max-width: 520px;
+  }
+  /* Card */
+  .confirm-card-wrapper {
+    margin-bottom: 16px;
+  }
+  .confirm-summary-card {
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 520px;
+  }
+  .summary-card-header {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .confirm-card-divider {
+    margin: 12px 0;
+  }
+  .confirm-product-row {
+    gap: 14px;
+  }
+  .product-thumbnail-box {
+    width: 54px;
+    height: 54px;
+    border-radius: 4px;
+  }
+  .product-placeholder-icon {
+    width: 26px;
+    height: 26px;
+  }
+  .product-title-text {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+  .product-variant-text {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  .product-price-text {
+    font-size: 13px;
+  }
+  .confirm-breakdown-area {
+    gap: 8px;
+  }
+  .breakdown-row {
+    font-size: 12px;
+  }
+  .confirm-total-row {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .confirm-guarantee-box {
+    border-radius: 6px;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+  .guarantee-badge-svg {
+    width: 18px;
+    height: 18px;
+  }
+  .guarantee-title-text {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .guarantee-desc-text {
+    font-size: 11px;
+  }
+  /* Details Row */
+  .confirm-details-wrapper {
+    margin-bottom: 24px;
+  }
+  .confirm-details-row {
+    max-width: 520px;
+    gap: 14px;
+  }
+  .confirm-info-card {
+    flex: 1;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .info-card-title {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  .info-card-content {
+    font-size: 12px;
+  }
+  /* CTA */
+  .confirm-cta-area {
+    margin-bottom: 24px;
+  }
+  /* Footer */
+  .confirm-site-footer {
+    padding: 40px 0 30px 0;
+  }
+  .footer-logo-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .footer-nav-links {
+    gap: 18px;
+    margin-bottom: 20px;
+  }
+  .footer-nav-links a {
+    font-size: 12px;
+  }
+  .footer-payments-heading {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+  .footer-payment-icons {
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .footer-legal-text {
+    font-size: 10px;
+    max-width: 600px;
+  }
+}
+/* ==========================================================================
+   11. RESPONSIVE: MOBILE MEDIA QUERY (<= 767.98px / <= 677px)
+   Exact pixel-perfect fidelity matching mobile mockup
+   Strict Serial Sequence matching HTML content order
+   ========================================================================= */
+@media (max-width: 767.98px) {
+  /* Section 2: Main Area */
+  .confirm-hero-area {
+    margin-bottom: 20px;
+  }
+ .confirm-badge-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+  .confirm-check-circle {
+    width: 40px;
+    height: 40px;
+  }
+  .confirm-check-svg {
+    width: 60px;
+    height: 60px;
+}
+  .confirm-main-title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 24px;
+  }
+  .confirm-main-subtitle {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0 4px;
+    margin-bottom: 32px;
+  }
+  /* Section 3: Order Summary Card */
+  .confirm-card-wrapper {
+    margin-bottom: 32px;
+  }
+  .confirm-summary-card {
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .summary-card-header {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+  .confirm-card-divider {
+    margin: 10px 0;
+  }
+  .confirm-product-row {
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .product-thumbnail-box {
+    width: 96px;
+    height: 96px;
+    border-radius: 4px;
+    border: 1px solid var(--border-default);
+  }
+  .product-placeholder-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .product-title-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .product-variant-text {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+  .product-price-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .confirm-breakdown-area {
+    gap: 6px;
+  }
+  .breakdown-row {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .confirm-total-row {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .total-amount-text {
+    font-weight: 700;
+  }
+  .confirm-guarantee-box {
+    border-radius: 4px;
+    padding: 20px;
+    gap: 8px;
+    border: 1px solid var(--border-default);
+  }
+  .guarantee-badge-svg {
+    width: 16px;
+    height: 16px;
+  }
+  .guarantee-title-text {
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 8px;
+  }
+  .guarantee-desc-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  /* Section 4: Details Cards (Stacked Vertically on Mobile) */
+  .confirm-details-wrapper {
+    margin-bottom: 18px;
+  }
+  .confirm-details-row {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .confirm-info-card {
+    width: 100%;
+    border-radius: 6px;
+    padding: 24px;
+  }
+  .info-card-title {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    margin-bottom: 16px;
+  }
+  .info-card-content {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  /* Section 5: Continue CTA (Wide on Mobile) */
+  .confirm-cta-area {
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+  .unify-btn-primary-md {
+    height: auto;
+    width: 100%;
+  }
+}
